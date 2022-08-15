@@ -17,6 +17,7 @@ html{
     text-align: center;
     border:none;
     color:#7342d6;
+    display: none;
 }
 .menu__backdrop{
     position:absolute;
@@ -29,10 +30,14 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
-    display: none;
+    transition: all 300ms ease;
+    opacity: 0;
+    visibility: hidden;
 }
 .menu--open .menu__backdrop{
-    display: flex;
+    visibility: visible;
+    opacity: 1;
+
 }
 .menu__links{
     display: flex;
@@ -326,5 +331,8 @@ footer{
 @media (max-width: 550px){
     .nav__links{
         display: none;
+    }
+    .btn__menu{
+        display:block;
     }
 }
