@@ -29,6 +29,10 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
+    display: none;
+}
+.menu--open .menu__backdrop{
+    display: flex;
 }
 .menu__links{
     display: flex;
@@ -318,4 +322,9 @@ footer{
 }
 .footer__link{
 
+}
+@media (max-width: 550px){
+    .nav__links{
+        display: none;
+    }
 }
