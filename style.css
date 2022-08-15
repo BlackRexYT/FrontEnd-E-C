@@ -34,6 +34,10 @@ html{
     opacity: 0;
     visibility: hidden;
 }
+.menu--open{
+    max-height: 100vh;
+    overflow-y: hidden;
+}
 .menu--open .menu__backdrop{
     visibility: visible;
     opacity: 1;
@@ -223,14 +227,13 @@ button:active{
 }
 .highlight__wrapper{
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
 }
 .highlight{
     padding: 0 24px;
     width:calc(100% / 3);
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
 }
 .highlight__para{
@@ -251,7 +254,8 @@ button:active{
 }
 .highlight__subtitle{
     font-size:20px;
-    margin-bottom:16px
+    margin-bottom:16px;
+    text-align: center;
 }
 
 /* Features */
@@ -328,11 +332,40 @@ footer{
 .footer__link{
 
 }
+/* Small phones tablets and large phones */
+@media (max-width: 768px){
+    .header__description{
+        padding: 0 24px;
+    }
+    h1{
+        font-size: 40px;
+    }
+    h2{
+        font-size: 26px;
+    }
+    button{
+        font-size: 18px;
+    }
+    .book{
+        width:50%;
+    }
+    .highlight{
+        width:100%;
+    }
+}
+
+/* small phones and large phones */
 @media (max-width: 550px){
     .nav__links{
         display: none;
     }
     .btn__menu{
         display:block;
+    }
+    .highlight{
+        width:100%;
+    }
+    .highlight:not(:last-child){
+        margin-bottom:24px;
     }
 }
